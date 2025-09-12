@@ -3,21 +3,47 @@ site_url: https://duong-ngo.github.io
 site_dir: site
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: blue grey
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark markdown_extensions
+    - scheme: slate
+      primary: blue grey
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.instant.progress
     - navigation.instant.preview
+    - navigation.indexes
     - navigation.tracking
     - navigation.sections
     - navigation.expand
     - navigation.top
     - toc.follow
-    - toc.integrate
     - search.suggest
     - search.highlight
     - search.share
 
 plugins:
+  - blog:
+      blog_dir: blog
+      post_dir: "{blog}/posts"
+      post_date_format: medium
+      post_url_date_format: yyyy/MM/dd
+      post_url_format: "{date}/{slug}"
+      post_url_max_categories: 5
+      authors_file: "{blog}/.authors.yml"
+      archive: true
+      archive_name: Archive
+      archive_date_format: MMMM yyyy
+      archive_url_date_format: yyyy/MM
+      archive_url_format: "archive/{date}"
+      categories: true
+      pagination: true
   - offline
   - search
   - tags
