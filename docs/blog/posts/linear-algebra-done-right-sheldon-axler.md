@@ -1,4 +1,5 @@
 ---
+comments: true
 authors:
   - duong-ngo
 date: 2025-09-11
