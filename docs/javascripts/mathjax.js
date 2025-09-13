@@ -11,6 +11,12 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: ".*|",
     processHtmlClass: "arithmatex"
+  },
+  startup: {
+    ready() {
+      // var CHTMLmath = MathJax._.output.chtml.Wrappers.math.CHTMLmath;
+      MathJax.startup.defaultReady();
+    }
   }
 };
 

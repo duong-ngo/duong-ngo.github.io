@@ -39,6 +39,7 @@ plugins:
       post_url_date_format: yyyy/MM/dd
       post_url_format: "{date}/{slug}"
       post_url_max_categories: 5
+      post_excerpt: required
       authors_file: "{blog}/.authors.yml"
       archive: true
       archive_name: Archive
